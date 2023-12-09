@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 class InfoCard extends StatelessWidget {
   final String title;
   final String info;
   final IconData icon;
 
-  const InfoCard({
+  const InfoCard({super.key,
     required this.title,
     required this.info,
     required this.icon,
@@ -13,9 +15,9 @@ class InfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             Icon(
@@ -23,19 +25,19 @@ class InfoCard extends StatelessWidget {
               size: 50,
               color: Colors.blue,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               info,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),
