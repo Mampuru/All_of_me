@@ -1,7 +1,12 @@
+import 'package:all_of_me/views/info_card_view.dart';
+import 'package:flutter/material.dart';
+
 class CardView extends StatelessWidget {
+  const CardView({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
