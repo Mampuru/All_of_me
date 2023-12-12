@@ -1,3 +1,4 @@
+import 'package:all_of_me/views/card_view.dart';
 import 'package:get/get.dart';
 import '../service/aws_cognito_service.dart';
 
@@ -9,7 +10,7 @@ class AuthController extends GetxController {
       // Perform login using AWS Cognito
       await _cognitoService.login(email, password);
       // Navigate to the next screen upon successful login
-      Get.offAll(HomeScreen());
+      Get.offAll(const CardView());
     } catch (e) {
       // Handle login error
       Get.snackbar('Login Failed', 'Error: $e');
