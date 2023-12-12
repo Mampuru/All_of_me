@@ -7,7 +7,7 @@ class AwsCognitoService {
   Future<void> login(String email, String password) async {
     final user = CognitoUser(email, userPool);
     final authDetails = AuthenticationDetails(
-      {'USERNAME': email, 'PASSWORD': password},
+      validationData: {'USERNAME': email, 'PASSWORD': password},
     );
     await user.authenticateUser(authDetails);
   }
