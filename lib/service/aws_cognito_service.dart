@@ -1,4 +1,5 @@
 import 'package:amazon_cognito_identity_dart_2/cognito.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AwsCognitoService {
@@ -9,7 +10,15 @@ class AwsCognitoService {
     final authDetails = AuthenticationDetails(
       validationData: {'USERNAME': email, 'PASSWORD': password},
     );
-    await user.authenticateUser(authDetails);
+    CognitoUserSession? session;
+    try{
+      session = await user.authenticateUser(authDetails);
+    }catch (e){
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+
   }
 
 // Other authentication-related methods can be implemented here
