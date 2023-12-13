@@ -37,6 +37,16 @@ class AwsCognitoService {
 
   }
 
-// Other authentication-related methods can be implemented here
+  Future<void> registrationConfirmed(String email, String opt) async {
+    final user = CognitoUser(email, userPool);
 
+    bool registrationConfirmed = false;
+    try {
+      registrationConfirmed = await user.confirmRegistration(opt);
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+  }
 }
