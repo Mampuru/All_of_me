@@ -17,5 +17,16 @@ class AuthController extends GetxController {
     }
   }
 
-// Other authentication-related methods can be added here
+  Future<void> registrationConfirmed(String email, String opt) async {
+    bool registrationConfirmed = false;
+    try {
+      // Perform login using AWS Cognito
+      registrationConfirmed = await _cognitoService.registrationConfirmed(email, opt);
+      // Navigate to the next screen upon successful login
+      Get.offAll(const CardView());
+    } catch (e) {
+      // Handle login error
+      Get.snackbar('Login Failed', 'Error: $e');
+    }
+  }
 }
