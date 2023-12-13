@@ -49,4 +49,18 @@ class AwsCognitoService {
       }
     }
   }
+
+  Future<void> resendRegConfirmed(String email ) async {
+    final user = CognitoUser(email, userPool);
+
+    final String status;
+    try {
+      status = await user.resendConfirmationCode();
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+  }
+
 }
