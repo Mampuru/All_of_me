@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AwsCognitoService {
-  final userPool = CognitoUserPool('${(dotenv.env['POOL_ID'])}', '${(dotenv.env['POOL_ID'])}');
+  final userPool = CognitoUserPool('${(dotenv.env['POOL_ID'])}', '${(dotenv.env['CLIENT_ID'])}');
 
   Future<void> login(String email, String password) async {
     final user = CognitoUser(email, userPool);
@@ -38,4 +38,5 @@ class AwsCognitoService {
   }
 
 // Other authentication-related methods can be implemented here
+
 }
