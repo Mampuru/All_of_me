@@ -1,4 +1,5 @@
 import 'package:all_of_me/views/card_view.dart';
+import 'package:all_of_me/views/otp_confirmation_view.dart';
 import 'package:get/get.dart';
 import '../service/aws_cognito_service.dart';
 
@@ -23,10 +24,11 @@ class AuthController extends GetxController {
       // Perform login using AWS Cognito
       registrationConfirmed = await _cognitoService.registrationConfirmed(email, opt);
       // Navigate to the next screen upon successful login
-      Get.offAll(const CardView());
+      registrationConfirmed ? Get.offAll(const CardView()) : Get.offAll(OTPScreen());
     } catch (e) {
       // Handle login error
       Get.snackbar('Login Failed', 'Error: $e');
     }
   }
+
 }
