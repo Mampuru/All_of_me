@@ -37,18 +37,22 @@ class AwsCognitoService {
 
   }
 
-  Future<void> registrationConfirmed(String email, String opt) async {
+  Future<bool> registrationConfirmed(String email, String otp) async {
     final user = CognitoUser(email, userPool);
-
     bool registrationConfirmed = false;
+
     try {
-      registrationConfirmed = await user.confirmRegistration(opt);
+      // Attempt to confirm the registration with the OTP
+      registrationConfirmed = await user.confirmRegistration(otp);
+      return registrationConfirmed; // Return the confirmation status
     } catch (e) {
       if (kDebugMode) {
-        print(e);
+        print(e); // Print the error in debug mode
       }
+      return false; // Return false if an exception occurred
     }
   }
+
 
   Future<void> resendRegConfirmed(String email ) async {
     final user = CognitoUser(email, userPool);
