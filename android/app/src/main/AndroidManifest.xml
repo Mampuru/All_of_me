@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ivisioncorp.all_of_me">
     <application
         android:label="All Of Me"
         android:name="${applicationName}"
