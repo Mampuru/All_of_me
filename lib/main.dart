@@ -1,9 +1,15 @@
 import 'package:all_of_me/views/sign_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:get/get.dart';
+
+import 'controlllers/auth_controller.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
+
+  Get.put(AuthController());
+
   runApp(const MyApp());
 }
 
