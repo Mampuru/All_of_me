@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ivisioncorp.all_of_me">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="All Of Me"
         android:name="${applicationName}"
