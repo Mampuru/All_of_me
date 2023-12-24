@@ -1,4 +1,4 @@
-package com.example.all_of_me
+package com.ivisioncorp.all_of_me
 
 import io.flutter.embedding.android.FlutterActivity
 
