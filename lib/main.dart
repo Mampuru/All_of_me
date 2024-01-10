@@ -1,7 +1,10 @@
+import 'package:all_of_me/constants.dart';
 import 'package:all_of_me/views/sign_in_view.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+
 
 import 'controllers/auth_controller.dart';
 
@@ -24,7 +27,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: AnimatedSplashScreen(
+          duration: 3000,
+          splash: splashLogo,
+          nextScreen: LoginScreen(),
+          splashTransition: SplashTransition.fadeTransition,
+          // pageTransitionType: PageTransitionType.scale,
+          backgroundColor: Colors.white)
     );
   }
 }
+
