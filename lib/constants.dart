@@ -1,0 +1,1 @@
+const splashLogo = "assets/logo/identity.png";
