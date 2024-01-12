@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
           duration: 3000,
           splash: splashLogo,
           nextScreen: LoginScreen(),
-          splashTransition: SplashTransition.fadeTransition,
-          // pageTransitionType: PageTransitionType.scale,
-          backgroundColor: Colors.white)
+          splashTransition: SplashTransition.scaleTransition,
+          splashIconSize: 150,
+          )
     );
   }
 }
