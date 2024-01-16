@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/auth_controller.dart';
+import 'card_view.dart';
 
 class LoginScreen extends StatelessWidget {
   final emailController = TextEditingController();
@@ -35,11 +36,15 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const CardView()));
                 // Call your GetX controller method to handle login
                 Get.find<AuthController>().login(
                   emailController.text.trim(),
                   passwordController.text.trim(),
                 );
+
+
               },
               child: const Text('Login'),
             ),
