@@ -1,4 +1,5 @@
 import 'package:all_of_me/constants.dart';
+import 'package:all_of_me/views/auth_login_view.dart';
 import 'package:all_of_me/views/sign_in_view.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:auth0_flutter/auth0_flutter.dart';
@@ -20,10 +21,8 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-
-  final Auth0 auth0;
-
   const MyApp({required this.auth0});
+  // final Auth0 auth0;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
       home: AnimatedSplashScreen(
           duration: 3000,
           splash: splashLogo,
-          nextScreen: LoginScreen(),
+          nextScreen: Auth0LoginScreen(auth0: auth0),
           splashTransition: SplashTransition.scaleTransition,
           splashIconSize: 150,
           )
