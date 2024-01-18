@@ -1,5 +1,6 @@
 import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'profile_view.dart';
 
 class MainView extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MainViewState extends State<MainView> {
   @override
   void initState() {
     super.initState();
-    auth0 = Auth0('vtech.auth0.com', 'WOh5ryQ4m7CK8F7CVXO5Irko9ONDC1pi');
+    auth0 = Auth0(dotenv.env['AUTHO_DOMAIN']!, dotenv.env['AUTHO_CLIENT_ID']!);
   }
 
   @override
