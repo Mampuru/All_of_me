@@ -1,5 +1,6 @@
 import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'profile_view.dart';
 
 class MainView extends StatefulWidget {
