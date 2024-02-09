@@ -21,7 +21,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({required this.auth0});
+  const MyApp({super.key, required this.auth0});
   // final Auth0 auth0;
 
   @override
