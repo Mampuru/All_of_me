@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:auth0_flutter/auth0_flutter.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../main.dart';
 
 class Auth0LoginScreen extends StatelessWidget {
-  final Auth0 auth0 = Auth0(baseUrl: 'https://<YOUR_AUTH0_DOMAIN>', clientId: '<YOUR_CLIENT_ID>');
+  Auth0 auth0 = Auth0(dotenv.env['AUTH0_DOMAIN']!, dotenv.env['AUTH0_CLIENT_ID']!,);
 
-  Auth0LoginScreen({super.key});
+  Auth0LoginScreen({super.key, required Auth0 auth0});
 
   Future<void> login() async {
     try {
