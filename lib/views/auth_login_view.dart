@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:auth0_flutter/auth0_flutter.dart';
 
 import '../main.dart';
 
 class Auth0LoginScreen extends StatelessWidget {
   final Auth0 auth0 = Auth0(baseUrl: 'https://<YOUR_AUTH0_DOMAIN>', clientId: '<YOUR_CLIENT_ID>');
+
+  Auth0LoginScreen({super.key});
 
   Future<void> login() async {
     try {
@@ -21,12 +22,12 @@ class Auth0LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Auth0 Login'),
+        title: const Text('Auth0 Login'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: login,
-          child: Text('Login with Auth0'),
+          child: const Text('Login with Auth0'),
         ),
       ),
     );
