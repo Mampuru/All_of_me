@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -15,7 +16,9 @@ class Auth0LoginScreen extends StatelessWidget {
       final userInfo = await auth0.getUserInfo();
       // Handle the user info as needed (e.g., store in state, navigate to home screen)
     } catch (e) {
-      print('Auth0 Login Error: $e');
+      if (kDebugMode) {
+        print('Auth0 Login Error: $e');
+      }
     }
   }
 
