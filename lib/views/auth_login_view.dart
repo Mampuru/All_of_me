@@ -12,8 +12,7 @@ class Auth0LoginScreen extends StatelessWidget {
 
   Future<void> login() async {
     try {
-      await auth0.webAuth.authorize();
-      final userInfo = await auth0.getUserInfo();
+
       // Handle the user info as needed (e.g., store in state, navigate to home screen)
     } catch (e) {
       if (kDebugMode) {
@@ -38,6 +37,4 @@ class Auth0LoginScreen extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(const MyApp());
-}
+
