@@ -5,6 +5,7 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 
@@ -19,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
   void initState() {
     _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 800));
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
-    _slideAnimation = Tween<Offset>(begin: Offset(0, 0.5), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _slideAnimation = Tween<Offset>(begin: const Offset(0, 0.5), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
     super.initState();
   }
 
@@ -46,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
               opacity: _fadeAnimation.value,
               child: Image.asset('assets/logo.png', height: 100, width: 100), // Replace with your logo image
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SlideTransition(
               position: _slideAnimation,
               child: TextField(
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SlideTransition(
               position: _slideAnimation,
               child: TextField(
@@ -64,11 +65,11 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 obscureText: true,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 _controller.forward();
-               
+
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CardView()));
               },
               child: const Text('Login'),
