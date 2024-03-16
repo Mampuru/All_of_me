@@ -4,17 +4,11 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:get/get.dart';
-
-
-import 'controllers/auth_controller.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
 
   Auth0 auth0 = Auth0(dotenv.env['AUTH0_DOMAIN']!, dotenv.env['AUTH0_CLIENT_ID']!,);
-
-  Get.put(AuthController());
 
   runApp(MyApp(auth0: auth0));
 }
