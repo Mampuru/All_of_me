@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../controllers/auth_controller.dart';
 import 'card_view.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStateMixin {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  late AnimationController _controller;
+  late Animation<double> _fadeAnimation;
+  late Animation<Offset> _slideAnimation;
 
-  LoginScreen({super.key});
+  @override
+  void initState() {
+    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 800));
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
+    _slideAnimation = Tween<Offset>(begin: Offset(0, 0.5), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,29 +41,35 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(
-              controller: emailController,
-              decoration: const InputDecoration(labelText: 'Email'),
-              keyboardType: TextInputType.emailAddress,
+            AnimatedOpacity(
+              duration: const Duration(milliseconds: 500),
+              opacity: _fadeAnimation.value,
+              child: Image.asset('assets/logo.png', height: 100, width: 100), // Replace with your logo image
             ),
-            const SizedBox(height: 20),
-            TextField(
-              controller: passwordController,
-              decoration: const InputDecoration(labelText: 'Password'),
-              obscureText: true,
+            SizedBox(height: 20),
+            SlideTransition(
+              position: _slideAnimation,
+              child: TextField(
+                controller: emailController,
+                decoration: const InputDecoration(labelText: 'Email'),
+                keyboardType: TextInputType.emailAddress,
+              ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
+            SlideTransition(
+              position: _slideAnimation,
+              child: TextField(
+                controller: passwordController,
+                decoration: const InputDecoration(labelText: 'Password'),
+                obscureText: true,
+              ),
+            ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const CardView()));
-                // Call your GetX controller method to handle login
-                Get.find<AuthController>().login(
-                  emailController.text.trim(),
-                  passwordController.text.trim(),
-                );
-
-
+                _controller.forward();
+               
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CardView()));
               },
               child: const Text('Login'),
             ),
