@@ -2,7 +2,7 @@
 
 [![My Skills](https://skillicons.dev/icons?i=flutter,dart)](https://skillicons.dev)
 
-A Flutter application that allow you to digitize your identifty
+A Flutter application that allows you to digitize your identifty.More like a digital varification application.
 
 ## Features 
 - Link your Drivers licence 
