@@ -8,4 +8,5 @@ A Flutter application that allow you to digitize your identifty
 - As a user you able to view your marriage status
 - Link you Drivers licence 
 - Link you Passport
+- Has Multi-factor authentication 
 
