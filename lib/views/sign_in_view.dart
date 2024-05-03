@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 obscureText: true,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 70),
             ElevatedButton(
               onPressed: () {
                 _controller.forward();
