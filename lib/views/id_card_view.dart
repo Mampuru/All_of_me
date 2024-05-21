@@ -34,13 +34,21 @@ class IDCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            Row(children: [
+              Icon(
+                icon,
+                size: 30,
+                color: Colors.blue,
               ),
-            ),
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],),
+
             const SizedBox(height: 10),
             Text(
               surname,

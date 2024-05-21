@@ -38,13 +38,20 @@ class DriverCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              licenceNumber,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            Row(children: [
+              Icon(
+                icon,
+                size: 30,
+                color: Colors.blue,
               ),
-            ),
+              Text(
+                licenceNumber,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],),
             const SizedBox(height: 10),
             Text(
               valid,
