@@ -65,12 +65,17 @@ class DriverCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  country,
+                  gender,
                   style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 10),
                 Text(
                   country,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  code,
                   style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 10),
