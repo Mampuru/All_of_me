@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class InfoCard extends StatelessWidget {
+class IDCard extends StatelessWidget {
   final String title;
   final String forename;
   final String surname;
@@ -9,7 +9,7 @@ class InfoCard extends StatelessWidget {
   final String issueDate;
   final IconData icon;
 
-  const InfoCard({
+  const IDCard({
     Key? key,
     required this.title,
     required this.forename,

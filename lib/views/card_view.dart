@@ -1,4 +1,4 @@
-import 'package:all_of_me/views/info_card_view.dart';
+import 'package:all_of_me/views/id_card_view.dart';
 import 'package:flutter/material.dart';
 
 class CardView extends StatelessWidget {
@@ -12,7 +12,7 @@ class CardView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            InfoCard(
+            IDCard(
               title: 'I.D No XXXXXX XXXX XXX',
               surname: 'MAMPURU',
               forename: "NTWAMPE",
