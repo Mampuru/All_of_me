@@ -2,14 +2,22 @@ import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
   final String title;
-  final String info;
+  final String forename;
+  final String surname;
+  final String country;
+  final String bob;
+  final String issueDate;
   final IconData icon;
 
   const InfoCard({
     Key? key,
     required this.title,
-    required this.info,
+    required this.forename,
     required this.icon,
+    required this.surname,
+    required this.country,
+    required this.bob,
+    required this.issueDate,
   }) : super(key: key);
 
   @override
@@ -43,7 +51,27 @@ class InfoCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  info,
+                  surname,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  forename,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  country,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  bob,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  issueDate,
                   style: const TextStyle(fontSize: 16),
                 ),
               ],
