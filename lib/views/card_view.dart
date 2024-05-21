@@ -15,7 +15,7 @@ class CardView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             IDCard(
-              title: 'I.D No. XXXXXX XXXX XXX',
+              title: 'No. XXXXXX XXXX XXX',
               surname: 'JOHN',
               forename: "WICK",
               country: "SOUTH AFRICA",
