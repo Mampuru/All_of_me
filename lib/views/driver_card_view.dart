@@ -14,12 +14,14 @@ class DriverCard extends StatelessWidget {
   const DriverCard({
     Key? key,
     required this.licenceNumber,
-    required this.forename,
+    required this.restriction,
     required this.icon,
-    required this.surname,
+    required this.valid,
     required this.country,
-    required this.bob,
+    required this.vehicleRestrictions,
     required this.issueDate,
+    required this.gender,
+    required this.code,
   }) : super(key: key);
 
   @override
@@ -45,7 +47,7 @@ class DriverCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  licenceNumber,
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -53,12 +55,12 @@ class DriverCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  surname,
+                  valid,
                   style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  forename,
+                  restriction,
                   style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 10),
@@ -68,7 +70,12 @@ class DriverCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  bob,
+                  country,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  vehicleRestrictions,
                   style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 10),
