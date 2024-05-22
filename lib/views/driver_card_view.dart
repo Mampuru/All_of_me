@@ -44,6 +44,7 @@ class DriverCard extends StatelessWidget {
                 size: 30,
                 color: Colors.blue,
               ),
+              const SizedBox(width: 10,),
               Text(
                 licenceNumber,
                 style: const TextStyle(

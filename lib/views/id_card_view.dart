@@ -40,6 +40,7 @@ class IDCard extends StatelessWidget {
                 size: 30,
                 color: Colors.blue,
               ),
+              const SizedBox(width: 10,),
               Text(
                 title,
                 style: const TextStyle(
