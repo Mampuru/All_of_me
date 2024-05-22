@@ -54,39 +54,84 @@ class DriverCard extends StatelessWidget {
               ),
             ],),
             const SizedBox(height: 10),
-            Text(
-              valid,
-              style: const TextStyle(fontSize: 16),
+            Row(children: [
+              const Text(
+                "Valid: ",
+                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+              ),
+              Text(
+                valid,
+                style: const TextStyle(fontSize: 16),
+              ),
+            ],),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+              const Text(
+                "Restriction: ",
+                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+              ),
+              Text(
+                restriction,
+                style: const TextStyle(fontSize: 16),
+              ),
+              const SizedBox(width: 20,),
+              const Text(
+                "Gender: ",
+                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+              ),
+              Text(
+                gender,
+                style: const TextStyle(fontSize: 16),
+              ),
+            ],),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                const Text(
+                  "Issued: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  country,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(width: 20,),
+                const Text(
+                  "Code: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  code,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              restriction,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "Vehicle Restriction: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  vehicleRestrictions,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              gender,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              country,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              code,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              vehicleRestrictions,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              issueDate,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "First Issue: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  issueDate,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
           ],
         ),
