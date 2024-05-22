@@ -23,7 +23,7 @@ class CardView extends StatelessWidget {
               bob: "2002-06-29",
               icon: Icons.credit_card,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             DriverCard(
               licenceNumber: "No. XXXXXXXXXXXX",
               country: "ZA",
