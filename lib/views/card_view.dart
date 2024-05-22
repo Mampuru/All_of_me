@@ -1,4 +1,5 @@
 import 'package:all_of_me/views/id_card_view.dart';
+import 'package:all_of_me/views/passport_card_view.dart';
 import 'package:flutter/material.dart';
 
 import 'driver_card_view.dart';
@@ -35,12 +36,16 @@ class CardView extends StatelessWidget {
               issueDate: "22/12/2017",
               icon: Icons.directions_car,
             ),
-            // SizedBox(height: 20),
-            // InfoCard(
-            //   title: 'Passport Info',
-            //   info: 'Your passport info here',
-            //   icon: Icons.flight,
-            // ),
+            SizedBox(height: 10),
+            PassCard(
+              title: 'No. XXXXXX XXXX XXX',
+              surname: 'JOHN',
+              forename: "WICK",
+              country: "SOUTH AFRICA",
+              issueDate: "2012-07-23",
+              bob: "2002-06-29",
+              icon: Icons.flight,
+            ),
           ],
         ),
       ),
