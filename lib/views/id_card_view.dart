@@ -49,31 +49,70 @@ class IDCard extends StatelessWidget {
                 ),
               ),
             ],),
-
             const SizedBox(height: 10),
-            Text(
-              surname,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "Surname: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  surname,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              forename,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "Forenames: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  forename,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              country,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "Country of Birth: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  country,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              bob,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "DoB: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  bob,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
             const SizedBox(height: 10),
-            Text(
-              issueDate,
-              style: const TextStyle(fontSize: 16),
+            Row(
+              children: [
+                const Text(
+                  "Issued: ",
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  issueDate,
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
             ),
           ],
         ),
