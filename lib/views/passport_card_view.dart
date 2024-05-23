@@ -6,7 +6,10 @@ class PassCard extends StatelessWidget {
   final String surname;
   final String country;
   final String bob;
+  final String countryCode;
+  final String type;
   final String issueDate;
+  final String identityNumber;
   final IconData icon;
 
   const PassCard({
@@ -17,7 +20,10 @@ class PassCard extends StatelessWidget {
     required this.surname,
     required this.country,
     required this.bob,
+    required this.identityNumber,
     required this.issueDate,
+    required this.countryCode,
+    required this.type,
   }) : super(key: key);
 
   @override
@@ -53,6 +59,28 @@ class PassCard extends StatelessWidget {
             Row(
               children: [
                 const Text(
+                  "Type: ",
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  type,
+                  style: const TextStyle(fontSize: 14),
+                ),
+                const SizedBox(width: 20,),
+                const Text(
+                  "Country Code: ",
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  countryCode,
+                  style: const TextStyle(fontSize: 14),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                const Text(
                   "Surname: ",
                   style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
                 ),
@@ -79,7 +107,7 @@ class PassCard extends StatelessWidget {
             Row(
               children: [
                 const Text(
-                  "Country of Birth: ",
+                  "Nationality: ",
                   style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
                 ),
                 Text(
@@ -93,11 +121,20 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "DoB: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   bob,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 14),
+                ),
+                const SizedBox(width: 20,),
+                const Text(
+                  "ID No.: ",
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  identityNumber,
+                  style: const TextStyle(fontSize: 14),
                 ),
               ],
             ),
