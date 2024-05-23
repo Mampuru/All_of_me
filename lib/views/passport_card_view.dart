@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class PassCard extends StatelessWidget {
   final String title;
   final String forename;
@@ -62,20 +64,20 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Type: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   type,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
                 const SizedBox(width: 20,),
                 const Text(
                   "Country Code: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   countryCode,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -84,11 +86,11 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Surname: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   surname,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -97,11 +99,11 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Forenames: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   forename,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -110,11 +112,11 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Nationality: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   country,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -123,20 +125,20 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "DoB: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   bob,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
                 const SizedBox(width: 20,),
                 const Text(
                   "ID No.: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   identityNumber,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -145,20 +147,20 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Issued: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   issueDate,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
                 const SizedBox(width: 10,),
                 const Text(
                   "Expiry: ",
-                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   expiryDate,
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
