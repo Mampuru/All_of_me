@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class DriverCard extends StatelessWidget {
   final String licenceNumber;
   final String gender;
@@ -57,11 +59,11 @@ class DriverCard extends StatelessWidget {
             Row(children: [
               const Text(
                 "Valid: ",
-                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
               ),
               Text(
                 valid,
-                style: const TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: plainTextSZ),
               ),
             ],),
             const SizedBox(height: 10),
@@ -69,20 +71,20 @@ class DriverCard extends StatelessWidget {
               children: [
               const Text(
                 "Restriction: ",
-                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
               ),
               Text(
                 restriction,
-                style: const TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: plainTextSZ),
               ),
               const SizedBox(width: 20,),
               const Text(
                 "Gender: ",
-                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
               ),
               Text(
                 gender,
-                style: const TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: plainTextSZ),
               ),
             ],),
             const SizedBox(height: 10),
@@ -90,20 +92,20 @@ class DriverCard extends StatelessWidget {
               children: [
                 const Text(
                   "Issued: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   country,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
                 const SizedBox(width: 20,),
                 const Text(
                   "Code: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   code,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -112,11 +114,11 @@ class DriverCard extends StatelessWidget {
               children: [
                 const Text(
                   "Vehicle Restriction: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   vehicleRestrictions,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
@@ -125,11 +127,11 @@ class DriverCard extends StatelessWidget {
               children: [
                 const Text(
                   "First Issue: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   issueDate,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
