@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class IDCard extends StatelessWidget {
   final String title;
   final String forename;
@@ -52,65 +54,65 @@ class IDCard extends StatelessWidget {
             const SizedBox(height: 10),
             Row(
               children: [
-                const Text(
+                Text(
                   "Surname: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   surname,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
             const SizedBox(height: 10),
             Row(
               children: [
-                const Text(
+                Text(
                   "Forenames: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   forename,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
             const SizedBox(height: 10),
             Row(
               children: [
-                const Text(
+                Text(
                   "Country of Birth: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   country,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
             const SizedBox(height: 10),
             Row(
               children: [
-                const Text(
+                Text(
                   "DoB: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   bob,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
             const SizedBox(height: 10),
             Row(
               children: [
-                const Text(
+                Text(
                   "Issued: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: plainTextSZ,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   issueDate,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: plainTextSZ),
                 ),
               ],
             ),
