@@ -49,6 +49,7 @@ class CardView extends StatelessWidget {
                 identityNumber: "XXXXXXXXXXXXX",
                 countryCode: 'ZAF',
                 type: 'PA',
+                expiryDate: '2050-07-23',
                 icon: Icons.flight,
               ),
             ],

@@ -9,6 +9,7 @@ class PassCard extends StatelessWidget {
   final String countryCode;
   final String type;
   final String issueDate;
+  final String expiryDate;
   final String identityNumber;
   final IconData icon;
 
@@ -24,6 +25,7 @@ class PassCard extends StatelessWidget {
     required this.issueDate,
     required this.countryCode,
     required this.type,
+    required this.expiryDate,
   }) : super(key: key);
 
   @override
@@ -143,11 +145,20 @@ class PassCard extends StatelessWidget {
               children: [
                 const Text(
                   "Issued: ",
-                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
                 ),
                 Text(
                   issueDate,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 14),
+                ),
+                const SizedBox(width: 10,),
+                const Text(
+                  "Expiry: ",
+                  style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  expiryDate,
+                  style: const TextStyle(fontSize: 14),
                 ),
               ],
             ),
