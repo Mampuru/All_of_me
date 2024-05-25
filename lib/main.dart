@@ -25,13 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AnimatedSplashScreen(
-          duration: 3000,
-          splash: splashLogo,
-          nextScreen: const LoginScreen(),
-          splashTransition: SplashTransition.scaleTransition,
-          splashIconSize: 150,
-          )
+      home: const LoginScreen()
     );
   }
 }
