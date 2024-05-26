@@ -10,4 +10,5 @@ A Flutter application that allows you to digitize your identifty.More like a dig
 - Link your ID card/book
 - As a user you able to view your marriage status
 - Has Multi-factor authentication 
+- View interaction where your ID was used
 
