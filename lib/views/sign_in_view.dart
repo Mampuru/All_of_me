@@ -1,6 +1,6 @@
 import 'package:all_of_me/constants.dart';
+import 'package:all_of_me/views/home_view.dart';
 import 'package:flutter/material.dart';
-import 'card_view.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 onPressed: () {
                   _controller.forward();
         
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CardView()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomeView()));
                 },
                 child: const Text('Login'),
               ),
