@@ -1,3 +1,5 @@
+import 'package:all_of_me/views/card_view.dart';
+import 'package:all_of_me/views/notifications_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,49 +9,49 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black,
+              ),
               child: Text(
                 'Menu',
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 // Navigate to home screen if necessary
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              leading: const Icon(Icons.message),
+              title: const Text('Notifications'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
-                // Navigate to settings screen
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NotificationView()));
               },
             ),
             ListTile(
-              leading: Icon(Icons.contact_page),
-              title: Text('Contact'),
+              leading: const Icon(Icons.contact_page),
+              title: const Text('Identification'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
-                // Navigate to contact screen
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CardView()));
               },
             ),
           ],
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Home Screen'),
       ),
     );
