@@ -1,5 +1,6 @@
 import 'package:all_of_me/constants.dart';
 import 'package:all_of_me/views/home_view.dart';
+import 'package:all_of_me/views/sign_up_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
 
   @override
   void initState() {
-    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 800));
+    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 400));
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
     _slideAnimation = Tween<Offset>(begin: const Offset(0, 0.5), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
     super.initState();
@@ -34,9 +35,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24,24,24,24),
@@ -44,11 +43,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              AnimatedOpacity(
-                duration: const Duration(milliseconds: 500),
-                opacity: _fadeAnimation.value,
-                child: Image.asset(splashLogo, height: 100, width: 100), // Replace with your logo image
-              ),
+              // AnimatedOpacity(
+              //   duration: const Duration(milliseconds: 5),
+              //   opacity: _fadeAnimation.value,
+              //   child:  // Replace with your logo image
+              // ),
+              Image.asset(splashLogo, height: 100, width: 80),
               const SizedBox(height: 70),
               SlideTransition(
                 position: _slideAnimation,
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 onPressed: () {
                   _controller.forward();
         
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomeView()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpView()));
                 },
                 child: const Text('Login'),
               ),
